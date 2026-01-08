@@ -11,6 +11,7 @@
   "license": "MIT",
   "packageManager": "pnpm@10.27.0",
   "devDependencies": {
+    "prettier": "^3.7.4",
     "prom-client": "^15.1.3"
   }
 }
