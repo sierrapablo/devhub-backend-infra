@@ -14,8 +14,8 @@ resource "docker_container" "this" {
 
   env = [
     "HOST=${var.host}",
-    "PORT=${var.api_external_port}",
-    "METRICS_PORT=${var.metrics_external_port}"
+    "PORT=${var.external_port}",
+    "METRICS_PORT=${var.metrics_port}"
   ]
 
   volumes {
