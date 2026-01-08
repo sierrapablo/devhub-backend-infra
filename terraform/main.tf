@@ -12,6 +12,13 @@ module "api_network" {
   external = var.api_network_external
 }
 
+module "proxy_network" {
+  source = "./modules/network"
+
+  name     = var.proxy_network_name
+  external = var.proxy_network_external
+}
+
 module "api_volume" {
   source = "./modules/volume"
 

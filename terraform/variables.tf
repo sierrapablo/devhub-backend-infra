@@ -34,6 +34,18 @@ variable "api_network_external" {
   default     = false
 }
 
+variable "proxy_network_name" {
+  description = "Nombre de la red del proxy"
+  type        = string
+  default     = "reverse-proxy"
+}
+
+variable "proxy_network_external" {
+  description = "Indica si la red del proxy es externa"
+  type        = bool
+  default     = true
+}
+
 variable "api_volume_name" {
   description = "Nombre del volumen de la API"
   type        = string
