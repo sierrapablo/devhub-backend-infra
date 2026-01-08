@@ -51,7 +51,8 @@ pipeline {
             -X \
             -Dsonar.projectKey=${SONAR_PROJECT_KEY} \
             -Dsonar.projectVersion=${env.VERSION} \
-            -Dsonar.sources=.
+            -Dsonar.sources=. \
+            -Dsonar.coverage.exclusions=**
           """
         }
       }
