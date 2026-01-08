@@ -80,7 +80,8 @@ pipeline {
           pnpm install --frozen-lockfile
 
           echo "Running prettier..."
-          pnpm exec prettier --config .prettierrc --write "src/**/*.{ts,js,html,css,astro,md,json}"
+          pnpm exec prettier --config .prettierrc --write "runtime/**/*.mjs"
+          pnpm exec prettier --config .prettierrc --write "server/**/*.mjs"
         """
       }
     }
