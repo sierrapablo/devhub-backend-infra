@@ -1,0 +1,17 @@
+{
+  "name": "devhub-backend-infra",
+  "version": "1.0.0",
+  "description": "Infraestructura para el backend de DevHub",
+  "main": "runtime/runtime-entry.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Pablo Sierra Lorente",
+  "license": "MIT",
+  "packageManager": "pnpm@10.27.0",
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "prom-client": "^15.1.3"
+  }
+}
