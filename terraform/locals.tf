@@ -14,4 +14,9 @@ locals {
     "${var.project_name}-${var.environment}-volume"
   )
 
+  api_runtime_name = coalesce(
+    var.api_runtime_name,
+    "${var.project_name}-${var.environment}-runtime"
+  )
+
 }

@@ -39,3 +39,21 @@ variable "api_volume_name" {
   type        = string
   default     = null
 }
+
+variable "api_runtime_name" {
+  description = "Nombre del contenedor de la API"
+  type        = string
+  default     = null
+}
+
+variable "api_runtime_image_name" {
+  description = "Nombre de la imagen del contenedor de la API"
+  type        = string
+  default     = null
+}
+
+variable "api_runtime_build_context" {
+  description = "Contexto de la API"
+  type        = string
+  default     = null
+}
