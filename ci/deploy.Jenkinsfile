@@ -12,6 +12,7 @@ pipeline {
     )
     choice(name: 'ENVIRONMENT', choices: ['prod', 'dev'], description: 'Qué entorno desplegar.')
     string(name: 'EXTERNAL_PORT', defaultValue: '3000', description: 'Puerto externo del contenedor.')
+    string(name: 'METRICS_PORT', defaultValue: '3001', description: 'Puerto externo de las métricas.')
   }
 
   environment {
@@ -19,7 +20,8 @@ pipeline {
     GIT_USER_EMAIL = 'jenkins[bot]@noreply.jenkins.io'
 
     TF_VAR_environment = "${params.ENVIRONMENT}"
-    TF_VAR_backend_external_port = "${params.EXTERNAL_PORT}"
+    TF_VAR_api_external_port = "${params.EXTERNAL_PORT}"
+    TF_VAR_api_metrics_port = "${params.METRICS_PORT}" 
   }
 
   stages {
