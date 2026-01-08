@@ -34,3 +34,19 @@ variable "restart_policy" {
   type        = string
   default     = "unless-stopped"
 }
+
+variable "host" {
+  description = "Dirección IP del host"
+  type        = string
+  default     = "0.0.0.0"
+}
+
+variable "external_port" {
+  description = "Puerto externo"
+  type        = string
+}
+
+variable "metrics_port" {
+  description = "Puerto de métricas"
+  type        = string
+}
