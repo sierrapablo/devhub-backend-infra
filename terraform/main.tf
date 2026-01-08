@@ -40,7 +40,8 @@ module "api_runtime" {
 
   network_names = [
     module.api_network.name,
-    module.database_network.name
+    module.database_network.name,
+    module.proxy_network.name
   ]
 
   volume_name = module.api_volume.name
