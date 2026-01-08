@@ -33,3 +33,9 @@ variable "api_network_external" {
   type        = bool
   default     = false
 }
+
+variable "api_volume_name" {
+  description = "Nombre del volumen de la API"
+  type        = string
+  default     = null
+}

@@ -9,4 +9,9 @@ locals {
     "${var.project_name}-${var.environment}-network"
   )
 
+  api_volume_name = coalesce(
+    var.api_volume_name,
+    "${var.project_name}-${var.environment}-volume"
+  )
+
 }

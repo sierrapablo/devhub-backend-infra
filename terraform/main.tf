@@ -11,3 +11,15 @@ module "api_network" {
   name     = local.api_network_name
   external = var.api_network_external
 }
+
+module "devhub_api_volume" {
+  source = "./modules/volume"
+
+  name = local.api_volume_name
+
+  labels = {
+    project     = var.project_name
+    environment = var.environment
+    purpose     = "api"
+  }
+}
