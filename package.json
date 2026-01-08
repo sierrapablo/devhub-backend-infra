@@ -1,6 +1,6 @@
 {
   "name": "devhub-backend-infra",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Infraestructura para el backend de DevHub",
   "main": "runtime/runtime-entry.mjs",
   "scripts": {
