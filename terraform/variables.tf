@@ -47,13 +47,13 @@ variable "api_runtime_name" {
 }
 
 variable "api_runtime_image_name" {
-  description = "Nombre de la imagen del contenedor de la API"
+  description = "Nombre de la imagen del contenedor del runtime de la API"
   type        = string
   default     = null
 }
 
 variable "api_runtime_build_context" {
-  description = "Contexto de la API"
+  description = "Contexto de construcción de la imagen del runtime de la API"
   type        = string
-  default     = null
+  default     = ".."
 }

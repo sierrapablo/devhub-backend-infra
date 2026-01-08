@@ -28,7 +28,7 @@ module "api_runtime" {
   source = "./modules/nodejs"
 
   name          = local.api_runtime_name
-  image_name    = var.api_runtime_image_name
+  image_name    = local.api_runtime_image_name
   build_context = var.api_runtime_build_context
 
   network_names = [
@@ -36,5 +36,5 @@ module "api_runtime" {
     module.database_network.name
   ]
 
-  volume_name  = module.api_volume.name
+  volume_name = module.api_volume.name
 }

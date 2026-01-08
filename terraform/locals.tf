@@ -19,4 +19,8 @@ locals {
     "${var.project_name}-${var.environment}-runtime"
   )
 
+  api_runtime_image_name = coalesce(
+    var.api_runtime_image_name,
+    "${var.project_name}-${var.environment}-runtime"
+  )
 }
