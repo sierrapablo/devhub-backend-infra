@@ -115,7 +115,7 @@ pipeline {
     stage('Terraform Apply') {
       steps {
         dir('terraform') {
-          sh "terraform apply -auto-approve -input=false -out=${env.TFPLAN_NAME}"
+          sh "terraform apply -auto-approve -input=false ${env.TFPLAN_NAME}"
         }
       }
     }
