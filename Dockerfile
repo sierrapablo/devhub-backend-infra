@@ -2,8 +2,7 @@ FROM node:24.11.1-alpine
 
 WORKDIR /app
 
-RUN corepack enable
-RUN corepack prepare pnpm@10.27.0 --activate
+RUN corepack enable && corepack prepare pnpm@10.27.0 --activate
 
 COPY package.json ./
 COPY pnpm-lock.yaml ./
