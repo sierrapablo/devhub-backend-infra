@@ -47,8 +47,8 @@ pipeline {
     stage('Validate Terraform Params') {
       steps {
         script {
-          if (!params.EXTERNAL_PORT?.isInteger() || !params.INTERNAL_PORT?.isInteger()) {
-            error "Ports must be integers. EXTERNAL_PORT=${params.EXTERNAL_PORT}, INTERNAL_PORT=${params.INTERNAL_PORT}"
+          if (!params.EXTERNAL_PORT?.isInteger() || !params.METRICS_PORT?.isInteger()) {
+            error "Ports must be integers. EXTERNAL_PORT=${params.EXTERNAL_PORT}, METRICS_PORT=${params.METRICS_PORT}"
           }
         }
       }
