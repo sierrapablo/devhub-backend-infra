@@ -57,3 +57,15 @@ variable "api_runtime_build_context" {
   type        = string
   default     = ".."
 }
+
+variable "api_external_port" {
+  description = "Puerto externo de la API"
+  type        = number
+  default     = 3000
+}
+
+variable "api_metrics_port" {
+  description = "Puerto de métricas de la API"
+  type        = number
+  default     = 3001
+}

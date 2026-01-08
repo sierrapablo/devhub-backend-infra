@@ -37,4 +37,7 @@ module "api_runtime" {
   ]
 
   volume_name = module.api_volume.name
+
+  external_port = var.api_external_port
+  metrics_port  = var.api_metrics_port
 }
