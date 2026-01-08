@@ -14,11 +14,10 @@ process.on('unhandledRejection', (reason, _promise) => {
   console.error('[Runtime] Unhandled Rejection:', reason);
 });
 
-import('../server/entry.mjs')
-  .then(() => {
-    console.log('[Runtime] Servidor cargado.');
-  })
-  .catch((err) => {
-    console.error('[Runtime] Error cargando servidor:', err);
-    process.exit(1);
-  });
+try {
+  await import('../server/entry.mjs');
+  console.log('[Runtime] Servidor cargado.');
+} catch (err) {
+  console.error('[Runtime] Error cargando servidor:', err);
+  process.exit(1);
+}
