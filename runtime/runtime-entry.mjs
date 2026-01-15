@@ -15,7 +15,7 @@ process.on('unhandledRejection', (reason, _promise) => {
 });
 
 try {
-  await import('../server/entry.mjs');
+  await import('../server/main.js');
   console.log('[Runtime] Servidor cargado.');
 } catch (err) {
   console.error('[Runtime] Error cargando servidor:', err);
